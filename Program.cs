@@ -26,17 +26,17 @@ void PrintArray(string[] Arr)
 string[] GetNewArray(string[] arr)
 {
     int length = 3;
-    int x = 0;
-    int z = arr.Length;
-    string[] NewArray = new string[z];
-    for (int i = 0; i < z; i++)
+    int counter = 0;
+    int arrayLength = arr.Length;
+    string[] NewArray = new string[arrayLength];
+    for (int i = 0; i < arrayLength; i++)
     {
         if (arr[i].Length <= length)
         {
-            NewArray[x] = arr[i];
-            x++;
+            NewArray[counter] = arr[i];
+            counter++;
         }        
     }
-    Array.Resize(ref NewArray, x);
+    Array.Resize(ref NewArray, counter);
     return NewArray;
 }
